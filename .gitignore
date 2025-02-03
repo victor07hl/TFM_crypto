@@ -1,1 +1,4 @@
 tfmunir_key.json
+
+#ignoring pycache
+*__pycache__*
