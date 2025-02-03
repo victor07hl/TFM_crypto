@@ -1,5 +1,6 @@
-from pywt import wavedec, idwt, upcoef, dwt
+from pywt import wavedec, upcoef
 import plotly.graph_objects as go
+import numpy as np
 
 
 class common_functions():
@@ -36,4 +37,12 @@ class common_functions():
                                     ,name=tag))
             
         fig.show()
+
+    def create_sequences(self,data, window_size, target_col):
+        X, y = [], []
+        for i in range(len(data) - window_size):
+            X.append(data.iloc[i:i+window_size])  # Ventana de entrada
+            y.append(data[target_col][i+window_size])    # Valor a predecir
+        return np.array(X), np.array(y)
+
 
