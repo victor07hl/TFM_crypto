@@ -25,7 +25,7 @@ class common_functions():
         return coeffs_taggged,inv_coeffs_tagged
     
 
-    def plot_inv_wv(self,inv_coeffs,date_signal,external_signals=None):
+    def plot_inv_wv(self,inv_coeffs,date_signal,external_signals=None,output_path=None):
         all_vectors = external_signals
         all_vectors.update(inv_coeffs)
         fig = go.Figure()
@@ -37,6 +37,8 @@ class common_functions():
                                     ,name=tag))
             
         fig.show()
+        if output_path != None:
+            fig.write_html(output_path)
 
     def create_sequences(self,data, window_size, target_col):
         X, y = [], []
