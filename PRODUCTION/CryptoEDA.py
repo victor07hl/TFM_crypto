@@ -70,7 +70,8 @@ class CryptoEDA:
         self._create_cyclic_features("month", 12, "month")
 
 
-        self.df = self.df.drop(columns=["Open time_date", "Close time_date"])
+        #self.df = self.df.drop(columns=["Open time_date", "Close time_date"])
+        self.df = self.df.drop(columns=["Open time_date"])
 
         # Crea la variable objetivo
         self.df["Target"] = self.df["Close"].shift(-1)

@@ -17,8 +17,8 @@ if __name__ == '__main__':
         binance = BinanceUtil(symbol="PEPEUSDT")
         raw_df = binance.get_historical_data(
             interval="1h",
-            start_time=datetime.datetime(2023, 10, 26),
-            end_time=datetime.datetime(2023, 10, 27)
+            start_time=datetime.datetime(2023, 4, 17),
+            end_time=datetime.datetime.now()
         )
 
         # 2. Verificar que se obtuvieron datos

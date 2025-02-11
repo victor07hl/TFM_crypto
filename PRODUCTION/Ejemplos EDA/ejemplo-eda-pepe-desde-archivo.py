@@ -13,7 +13,7 @@ if __name__ == '__main__':
     try:
         # 1. Cargar datos con FileHelper
         file_helper = FileHelper()  # Instancia sin argumentos
-        pepe_df = file_helper.load_csv(file_path="./data", file_name="datos_PEPEUSDT_.csv") #Pasamos path y nombre.  Ruta relativa CORRECTA.
+        pepe_df = file_helper.load_csv(file_path="./data", file_name="datos_PEPEUSDT.csv") #Pasamos path y nombre.  Ruta relativa CORRECTA.
 
 
         # 2. Crear instancia de CryptoEDA y procesar
