@@ -2,3 +2,12 @@ tfmunir_key.json
 *.html*
 #ignoring pycache
 *__pycache__*
+__pycache__/
+*.py[cod]
+.venv/
+env/
+venv/
+virtualenv/
+
+#ignoring html files
+*html*

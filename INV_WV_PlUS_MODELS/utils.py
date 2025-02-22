@@ -35,7 +35,11 @@ class common_functions():
                                     ,y=inv_coeff
                                     ,mode='lines'
                                     ,name=tag))
-            
+        fig.update_layout(
+            xaxis_title="Tiempo",
+            yaxis_title="Valor",
+            title='Grafica de inversa de Wavelet'
+        )
         fig.show()
         if output_path != None:
             fig.write_html(output_path)
